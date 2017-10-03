@@ -9,22 +9,19 @@ c = gets.chomp.to_f
 
 d = b * b - 4 * a * c
 
-if d < 0
-  abort "Корней нет"
+if d > 0
+  x1 = (- b + Math.sqrt(d)) / (2 * a)
+  x2 = (- b - Math.sqrt(d)) / (2 * a)
+
+  puts "x1 = #{x1}, x2 = #{x2}"
+
 elsif d == 0
-  sqr = 0
-elsif
-  sqr = Math.sqrt(d)
+  x1 = x2 = (- b) / (2 * a)
+
+  puts "x1 = #{x1}, x2 = #{x2}"
+
+else
+  puts "Корней нет"
 end
 
 
-
-
-
-
-x1 = (- b + sqr) / (2 * a)
-
-x2 = (- b - sqr) / (2 * a)
-
-puts x1
-puts x2
